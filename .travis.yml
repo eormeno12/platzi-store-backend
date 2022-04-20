@@ -28,5 +28,4 @@ deploy:
   api_key: 9c0cb3b8-11a6-444b-a627-532628c47f8b
   app: platzi-store-backend-eormeno
   on:
-    repo: eormeno12/platzi-store-backend
     branch: main
