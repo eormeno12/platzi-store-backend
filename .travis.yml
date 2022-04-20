@@ -29,3 +29,4 @@ deploy:
   app: platzi-store-backend-eormeno
   on:
     repo: eormeno12/platzi-store-backend
+    branch: main
