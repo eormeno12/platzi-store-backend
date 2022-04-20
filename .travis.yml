@@ -1,31 +1,28 @@
 language: node_js
 cache:
   directories:
-    - node_modules
-    - ~/.npm
-
+  - node_modules
+  - "~/.npm"
 node_js:
-  - '12'
-
+- '12'
 git:
   depth: 3
-
 scripts:
-  - yarn test
-
-notifications: 
-  slack: travis-citest:IC4II2ziKAZ4dc5B3gV15s3s
-  email: 
+- yarn test
+notifications:
+  slack:
+    secure: opdMswYMKjN1puZv9qYJ7/IrdYysSUM0XKVXHxj2WG6YCuNo8Uv6s5UI6QEKwjg1bUM08ciNZX9PmZ3cngZbOEl9fbLYuCtWof+LP+qmcD1mVGwRhuvkkwkxLxsNPB0IB4sF7lOvYCLODT/kWz8tME8CLnoSj2MsM7rBuZQRmzQJ1BaOTEhR0Fsj+cVB5sJjFOpwNVqiBnbfaAHqxDBUbEFwdMB4wS1+uj7zEeMSd5XKDQobbjYbku/U0TYCDBoX8AqDtGPfVVgK6vabq+ivIiMC6oVAbbxv4kvPWpcKPShbZR7bc6W5S4wI8o7+9ivxbTxR272ttcy8gSbpTrX6sCGcruGGJ+BGqv9jCrM8bSyRU5Gpmly+eNio29pYR7LHmW6uOh7+nJURdOivp9AprIQO+JtW/k2ArWrJUMD49Xfs2CVGGvmdGygDf8FNuOQATubCjYqmlRl1lU5SkNWQsk50xmyS3n/ay5SUu98Do3z1yyGEjwRHrFrFv3icMTeRmS7GOQGR6RAnk4EOsD2lz4V+8TeIWxc1soI2Uf9OWUe5UR6GZm+bjJlxoZbYl3awb29VNUQTa51o7nwpQgRg/h0Gsbsouap9s16dDfsQvjSF1yQH/w1ky9X/P+VMi1pqv3X+AduZ4cIg7Z9VqFujZJaopygfnsUpZRqsHVGetFw=
+  email:
     recipients:
-      - eormeno12@gmail.com
+    - eormeno12@gmail.com
     on_success: always
     on_failure: always
-
 deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 9c0cb3b8-11a6-444b-a627-532628c47f8b
+  api_key:
+    secure: TL773rkJLYwBj/EGAYCJem3IGOe6Kt3pdc4avQB+AmfXTAHbjNabivsPZeZcGV+5HMSwrIKJUCzLRM4tzOsgTRIwgtYfe0ubG7jkhvU2/aum7na4pWtUfT9M/XHR5HrL51qpoofXTaiQ/u20fcBDDN49YEZ7Lg0iyR7k8VJsfXejIdrAn8bnv96VJFgh0eFeSCZGM+UNNFqgrByN2TVvonzWjMb2HZi2y3zET7VytavqTUij78DmGZmSffXnTrQIa9hOHqVjBqSDz/doEKl7w6JW8SWfj3mxajFEJkkKT884wLhAxFS8eNhhHrOH4OO/QzrCG4cReqJccXtQgwL4T8vs2TwzpCk/rdWACPtT2h9Yd25oXdMz6C5IFkfqZgA5+TzpZU0zUljEuUqJseRg2EH//LObbnShyngKWHmciVbfzLYxDy8jYJb4muU5Lz6q0Xg9OwaiTxrYGK8VflsuRJepsbIqu0o05usgr/Hmf3FtMQkV5C1qNlMis28dZstbuN84OI7bV1ws5IVoYxMvaMYURvhY/eOkqzdP+Y5s7gWNBTjvBUE7O/DcuKWAjDuQ7WTQ1V3VbFrF2bYzRfUUjEDsJECzuQuOCx4D+TCNHXUQaX48EXjq7YScmWxwo7EwxouT/cKQGJWENWGFihNotu0dFU3/xuKkPMs579IaHX8=
   app: platzi-store-backend-eormeno
   on:
     repo: eormeno12/platzi-store-backend
