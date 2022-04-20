@@ -1,0 +1,31 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+scripts:
+  - yarn test
+
+notifications: 
+  slack: travis-citest:IC4II2ziKAZ4dc5B3gV15s3s
+  email: 
+    recipients:
+      - eormeno12@gmail.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 9c0cb3b8-11a6-444b-a627-532628c47f8b
+  app: platzi-store-backend-eormeno
+  on:
+    repo: eormeno12/platzi-store-backend
